@@ -41,4 +41,38 @@
             </div>
         </div>
     </div>
+    
+        <!-- Modal Create Student -->
+    <div class="modal fade" id="createNewStd" tabindex="-1">
+        <div class="modal-dialog">
+            <form method="post" action="{{ route('std.create') }}">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Create New Student</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="stdName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Age</label>
+                            <input type="number" class="form-control" name="stdAge" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Gender</label>
+                            <input type="text" class="form-control" name="stdGender">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </div>
