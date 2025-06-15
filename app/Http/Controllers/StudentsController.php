@@ -29,7 +29,7 @@ class StudentsController extends Controller
 
         return redirect()->route('std.index')->with('success', 'Student created successfully.');
     }
-    
+
     public function editStd($id)
     {
         $student = Students::findOrFail($id);
