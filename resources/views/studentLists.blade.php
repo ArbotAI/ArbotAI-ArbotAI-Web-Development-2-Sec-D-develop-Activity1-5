@@ -32,6 +32,10 @@
                                     <td>{{ $std->name }}</td>
                                     <td>{{ $std->age }}</td>
                                     <td>{{ $std->gender }}</td>
+                                    <td>
+                                        <a href="{{ route('std.edit', $std->id) }}" class="btn" style="color: blue;">Edit</a>
+                                        <a href="{{ route('std.delete', $std->id) }}" class="btn" style="color: red;">Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -41,8 +45,8 @@
             </div>
         </div>
     </div>
-    
-        <!-- Modal Create Student -->
+
+    <!-- Modal Create Student -->
     <div class="modal fade" id="createNewStd" tabindex="-1">
         <div class="modal-dialog">
             <form method="post" action="{{ route('std.create') }}">
@@ -73,6 +77,4 @@
             </form>
         </div>
     </div>
-</div>
-
 </div>
